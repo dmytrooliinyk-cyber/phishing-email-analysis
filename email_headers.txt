@@ -1,0 +1,23 @@
+Return-Path: <security-alert@microsoft-support-example.com>
+Delivered-To: employee@example.com
+
+Received: from mail.microsoft-support-example.com (192.0.2.45)
+    by mail.example.com with ESMTP id ABC123456
+    for <employee@example.com>;
+    Wed, 05 Aug 2026 09:14:22 +0200
+
+From: Microsoft Security Team <security-alert@microsoft-support-example.com>
+To: employee@example.com
+Subject: URGENT: Your Microsoft 365 account will be suspended
+Date: Wed, 05 Aug 2026 09:13:58 +0200
+Message-ID: <20260805091358.12345@microsoft-support-example.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+
+Authentication-Results: mail.example.com;
+    spf=fail smtp.mailfrom=microsoft-support-example.com;
+    dkim=none;
+    dmarc=fail header.from=microsoft-support-example.com
+
+X-Originating-IP: [192.0.2.45]
+X-Mailer: PHP/8.2

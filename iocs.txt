@@ -1,0 +1,30 @@
+PHISHING EMAIL INDICATORS OF COMPROMISE
+
+Sender email:
+security-alert@microsoft-support-example.com
+
+Sender domain:
+microsoft-support-example.com
+
+Sending host:
+mail.microsoft-support-example.com
+
+Source IP:
+192.0.2.45
+
+Malicious URL:
+hxxps://microsoft-account-verification[.]example[.]com/login
+
+URL domain:
+microsoft-account-verification.example.com
+
+Email subject:
+URGENT: Your Microsoft 365 account will be suspended
+
+Message-ID:
+20260805091358.12345@microsoft-support-example.com
+
+Authentication results:
+SPF: Fail
+DKIM: None
+DMARC: Fail
