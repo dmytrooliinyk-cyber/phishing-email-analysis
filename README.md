@@ -1,88 +1,48 @@
-Phishing Email Analysis
+# Phishing Email Analysis
 
+A practical SOC analyst investigation of a simulated Microsoft 365 credential-phishing email.
 
+The project demonstrates a basic phishing triage workflow: reviewing the message and headers, identifying authentication failures and social-engineering indicators, extracting indicators of compromise, assessing risk, and documenting recommended response actions.
 
-A practical SOC analyst training project focused on investigating a simulated
+> All indicators and identities used in this repository are fictional and intended for training purposes.
 
-Microsoft 365 credential phishing email.
+## Investigation Scenario
 
+A user received an email claiming to come from the Microsoft Security Team.
 
+The message warned that the user's Microsoft 365 account would be suspended within 24 hours unless the recipient verified their identity through an external link.
 
-The project demonstrates the process of reviewing email headers, identifying
+The investigation focused on determining whether the message was legitimate and documenting the evidence supporting the final verdict.
 
-social engineering techniques, extracting indicators of compromise, assessing
+## Evidence Reviewed
 
-risk, and recommending incident response actions.
+The repository contains:
 
+- `email_body.txt` — simulated suspicious email
+- `email_headers.txt` — simulated email headers
+- `iocs.txt` — extracted indicators
+- `analyst_notes.md` — investigation notes
+- `report.md` — final SOC investigation report
 
+## Investigation Workflow
 
-Project objectives
-
-
-
-\- Analyze a suspicious email
-
-\- Review sender and destination domains
-
-\- Interpret SPF, DKIM, and DMARC results
-
-\- Extract indicators of compromise
-
-\- Classify the phishing technique
-
-\- Assess incident severity
-
-\- Recommend containment and remediation actions
-
-\- Map the activity to MITRE ATT\&CK
-
-
-
-Investigation summary
-
-
-
-The analyzed email impersonated Microsoft and claimed that the recipient's
-
-Microsoft 365 account would be suspended within 24 hours.
-
-
-
-The email directed the recipient to an external account-verification page.
-
-
-
-Several indicators confirmed that the message was malicious:
-
-
-
-\- the sender domain was not associated with Microsoft;
-
-\- the embedded URL used a different domain;
-
-\- SPF authentication failed;
-
-\- no DKIM signature was present;
-
-\- DMARC authentication failed;
-
-\- the message used urgency and fear;
-
-\- the email requested account verification through an external link.
-
-
-
-Final classification
-
-
-
-text
-
-Classification: Credential phishing
-
-Severity: High
-
-Confidence: High
-
-Target: Microsoft 365 credentials
-
+```text
+Suspicious Email
+      ↓
+Message Review
+      ↓
+Header Analysis
+      ↓
+Sender / Domain Review
+      ↓
+SPF / DKIM / DMARC Review
+      ↓
+URL and IOC Extraction
+      ↓
+Social Engineering Analysis
+      ↓
+Risk Assessment
+      ↓
+Final Verdict
+      ↓
+Containment / Remediation Recommendations
